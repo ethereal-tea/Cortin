@@ -6,4 +6,104 @@
 
 body {
     font-family: "Roboto-Light", sans-serif;
+    background: #12253B;
+    color: #8CAAC8;
+}
+
+body > * {
+    width: 87%;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.header__phone-btn, .header__menu-btn {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background: transparent;
+}
+
+.header__buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.header__phone-btn {
+    background: no-repeat center / 65% url("../svg/phone.svg");
+}
+
+.header__menu-btn {
+    background: no-repeat center / 65% url("../svg/hamburger.svg");
+}
+
+/* HERO */
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto auto auto 2rem auto;
+    grid-template-areas:
+    "text text"
+    "img1 img1"
+    "img2 img3"
+    "img4 img3"
+    "img4 img5";
+    gap: 1.5rem 2rem;
+    margin-bottom: 5rem;
+}
+
+.hero__text {
+    grid-area: text;
+    text-align: center;
+}
+
+.h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 120%;
+    letter-spacing: .3rem;
+    font-family: "Futura PT Medium", sans-serif;
+    color: #BBA390;
+    text-transform: uppercase;
+}
+
+.header__description {
+    margin-bottom: 4rem;
+    line-height: 1.5rem;
+    color: #91A4B8;
+}
+
+.hero__card-large {
+    grid-area: img1;
+}
+
+.hero__card-3 {
+    grid-area: img3;
+}
+
+.hero__card-4 {
+    grid-area: img4;
+}
+
+.hero__card-5 {
+    grid-area: img5;
 }
