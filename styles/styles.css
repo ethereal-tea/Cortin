@@ -10,6 +10,10 @@ body {
     color: #8CAAC8;
 }
 
+ul {
+    list-style: none;
+}
+
 body > * {
     width: 87%;
     margin: 0 auto;
@@ -25,6 +29,18 @@ img {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.primary-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: none;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    background: #2B8CFC;
 }
 
 /* HEADER */
@@ -77,14 +93,22 @@ a {
     text-align: center;
 }
 
-.h1 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    line-height: 120%;
-    letter-spacing: .3rem;
+.h1 , .h2 {
     font-family: "Futura PT Medium", sans-serif;
     color: #BBA390;
     text-transform: uppercase;
+    line-height: 2rem;
+}
+
+.h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: .3rem;
+}
+
+.h2 {
+   font-size: 1.3rem;
+   margin-bottom: .5rem;
 }
 
 .hero__link {
@@ -98,7 +122,7 @@ a {
     color: #fff;
 }
 
-.hero__link::after {
+.hero__link::after, .offer-studios__link::after {
     content: "";
     display: block;
     width: 1.5rem;
@@ -127,3 +151,129 @@ a {
 .hero__card-5 {
     grid-area: img5;
 }
+
+/* Offer dealers */
+
+.offer-dealers, .offer-studios, .shops {
+    margin: 3rem 0 3rem;
+}
+
+.offer-dealers__text {
+    color: #5B82A9;
+}
+
+.offer-dealers__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.offer-dealers__item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.offer-dealers__item::before {
+    content: "";
+    display: block;
+    min-width: 40px;
+    min-height: 60px;
+}
+
+.offer-dealers__item:first-child::before {
+    background: no-repeat center /90% url("../svg/video.svg");
+}
+
+.offer-dealers__item:nth-child(2)::before {
+    background: no-repeat center /90% url("../svg/woman.svg");
+}
+
+.offer-dealers__item:nth-child(3)::before {
+    background: no-repeat center /90% url("../svg/document.svg");
+}
+
+.offer-dealers__item:nth-child(4)::before {
+    background: no-repeat center /90% url("../svg/catalogue.svg");
+}
+
+.offer-dealers__form {
+    margin-top: 2rem;
+}
+
+.offer-dealers__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.offer-dealers__input {
+    padding: 1rem;
+    border: 1px solid #385980;
+    font-family: "Roboto-Light-Italic", sans-serif;
+    background: transparent;
+    color: #5C82A8;
+}
+
+.offer-dealers__input::placeholder {
+    font-family: "Roboto-Light-Italic", sans-serif;
+    color: #5C82A8;
+}
+
+.offer-dealers__input:focus {
+    outline: none;
+}
+
+
+/* Offer Studios */
+
+.offer-studios {
+    text-align: center;
+}
+
+.offer-studios__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.offer-studios__card {
+    display: flex;
+    flex: 1;
+    padding: 1rem;
+    background: #051627;
+    border-radius: 2rem;
+}
+
+.offer-studios__card:nth-child(1), .offer-studios__card:nth-child(2) {
+    flex-direction: column;
+} 
+
+.offer-studios__title {
+    color: #8CAAC8;
+}
+
+.offer-studios__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    color: #fff;
+}
+
+.offer-studios__link::before {
+    content: "";
+    position: absolute;
+    display: block;
+    min-width: 263px;
+    height: 1px;
+    margin-top: .5rem;
+    background-color: #7E8895;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
