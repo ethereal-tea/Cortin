@@ -311,3 +311,62 @@ a {
 .shops .primary-btn {
     margin: 0 auto;
 }
+
+
+/* Footer */
+
+.footer {
+    width: 100%;
+}
+
+.footer__logo {
+    width: 35%;
+    max-width: 135px;
+    margin-bottom: 1.5rem;
+}
+
+.footer__products, .footer__offers, .footer__contacts, .footer__meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}  
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footer__products {
+    background: #2A486B;
+}
+
+.footer__products .footer__link {
+    font-family: "Roboto-Regular", sans-serif;
+    color: #fff;
+}
+
+.footer__offers {
+    background: #203B5A;
+}
+
+.footer__contacts {
+    background: #18304C;
+}
+
+.footer__phone {
+    margin-bottom: 1rem;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.footer__address {
+    max-width: 145px;
+    margin-bottom: 2rem;
+    font-family: "Roboto-Light", sans-serif;
+    font-style: normal;
+    color: #fff;
+}
