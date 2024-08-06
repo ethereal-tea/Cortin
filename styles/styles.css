@@ -240,10 +240,22 @@ a {
 
 .offer-studios__card {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
     flex: 1;
     padding: 1rem;
     background: #051627;
     border-radius: 2rem;
+}
+
+.offer-studios__card:last-child {
+    flex-direction: row;
+}
+
+.offer-studios__card:last-child .offer-studios__title {
+    text-align: left;
 }
 
 .offer-studios__card:nth-child(1), .offer-studios__card:nth-child(2) {
@@ -277,3 +289,25 @@ a {
     transform: translate(-50%, -50%);
 }
 
+
+.offer-studios__image {
+    width: 80%;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+
+/* Shops */
+
+.shops {
+    text-align: center;
+}
+
+.shops__text {
+    display: block;
+    margin: 1.5rem 0 2rem;
+}
+
+.shops .primary-btn {
+    margin: 0 auto;
+}
