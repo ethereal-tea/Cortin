@@ -14,7 +14,7 @@ ul {
     list-style: none;
 }
 
-body > * {
+body>* {
     width: 87%;
     margin: 0 auto;
 }
@@ -22,7 +22,6 @@ body > * {
 img {
     display: block;
     width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
@@ -52,7 +51,8 @@ a {
     padding: 2rem 0;
 }
 
-.header__phone-btn, .header__menu-btn {
+.header__phone-btn,
+.header__menu-btn {
     width: 2rem;
     height: 2rem;
     border: none;
@@ -77,23 +77,100 @@ a {
 .hero {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: auto 224px 122px 55px auto;
+    grid-template-rows: repeat(5, auto);
     grid-template-areas:
-    "text text"
-    "img1 img1"
-    "img2 img3"
-    "img4 img3"
-    "img4 img5";
-    gap: 4rem 2rem;
-    margin-bottom: 5rem;
+        "text text"
+        "img1 img1"
+        "img2 img3"
+        "img4 img3"
+        "img4 img5";
+    gap: 2rem;
 }
+
+.hero__card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero__card-large .hero__preview {
+    aspect-ratio: 1 / 1;
+}
+
+.hero__card-small .hero__preview {
+    aspect-ratio: 1 / 1;
+}
+
+.hero__card-medium .hero__preview {
+    aspect-ratio: 9 / 16;
+}
+
+.hero__card-medium:last-child() {
+    align-self: end;
+}
+
+.hero__card--austria {
+    grid-area: img2;
+}
+
+.hero__card--france {
+    grid-area: img3;
+}
+
+.hero__card--london {
+    grid-area: img4;
+}
+
+.hero__card--straight {
+    grid-area: img5;
+}
+
 
 .hero__text {
     grid-area: text;
     text-align: center;
 }
 
-.h1 , .h2 {
+@media screen and (min-width: 600px) {
+    .hero {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "text img1"
+            "img2 img1"
+            "img2 img3"
+            "img4 img3"
+            "img4 img5";
+        gap: 4rem;
+    }
+    /* .hero__card--austria {
+        align-self: end;
+    }  */
+    /* .hero__card--london {
+        align-self: start;
+    } */
+
+    .hero__text {
+        text-align: left;
+    }
+    .hero__card--london {
+        flex-direction: column-reverse;
+    }
+
+    .hero__card-large .hero__preview {
+        aspect-ratio: 9 / 16;
+    }
+
+    .hero__card:last-child .hero__preview {
+        aspect-ratio: 16 / 9;
+    }
+
+    .hero__card-small .hero__preview {
+        aspect-ratio: 9 / 16;
+    }
+}
+
+.h1,
+.h2 {
     font-family: "Futura PT Medium", sans-serif;
     color: #BBA390;
     text-transform: uppercase;
@@ -107,8 +184,8 @@ a {
 }
 
 .h2 {
-   font-size: 1.3rem;
-   margin-bottom: .5rem;
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
 }
 
 .hero__link {
@@ -122,7 +199,8 @@ a {
     color: #fff;
 }
 
-.hero__link::after, .offer-studios__link::after {
+.hero__link::after,
+.offer-studios__link::after {
     content: "";
     display: block;
     width: 1.5rem;
@@ -139,22 +217,13 @@ a {
     grid-area: img1;
 }
 
-.hero__card-3 {
-    grid-area: img3;
-}
 
-.hero__card-4 {
-    align-self: start;
-    grid-area: img4;
-}
-
-.hero__card-5 {
-    grid-area: img5;
-}
 
 /* Offer dealers */
 
-.offer-dealers, .offer-studios, .shops {
+.offer-dealers,
+.offer-studios,
+.shops {
     margin: 3rem 0 3rem;
 }
 
@@ -258,9 +327,10 @@ a {
     text-align: left;
 }
 
-.offer-studios__card:nth-child(1), .offer-studios__card:nth-child(2) {
+.offer-studios__card:nth-child(1),
+.offer-studios__card:nth-child(2) {
     flex-direction: column;
-} 
+}
 
 .offer-studios__title {
     color: #8CAAC8;
@@ -325,20 +395,24 @@ a {
     margin-bottom: 1.5rem;
 }
 
-.footer__products, .footer__offers, .footer__contacts, .footer__meta {
+.footer__products,
+.footer__offers,
+.footer__contacts,
+.footer__meta {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
     padding: 2rem;
-}  
+}
 
 .footer__list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
+
 .footer__products {
     background: #2A486B;
 }
